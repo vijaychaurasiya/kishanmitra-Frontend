@@ -1,0 +1,292 @@
+/* ----------------Intro section------------ */
+
+.intro-left {
+  grid-area: intro-left;
+  border: 2px solid black;
+  position: relative;
+  height: auto;
+  box-shadow: 2px 2px 10px greenyellow;
+}
+
+.intro-left::before {
+  position: absolute;
+  content: "";
+  background: url("../img/bg-2.jpg") center center/cover;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.7;
+  background-repeat: no-repeat;
+}
+
+/* .intro-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
+
+.intro-left h2 {
+  font-weight: bold;
+  margin: 5px;
+  font-size: 2.5rem;
+  color: rgb(248, 244, 0);
+  text-shadow: 3px 3px 8px black;
+  font-family: var(--font-3);
+}
+
+.intro-left p {
+  text-align: center;
+  font-size: 1.3rem;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 10px rgb(0, 0, 0);
+  font-family: var(--font-4);
+}
+
+.intro-section {
+  margin: 10px 2px;
+  width: 100%;
+  height: 280px;
+  display: grid;
+  grid-template-areas:
+    "intro-left intro-left intro-left intro-left "
+    "intro-left intro-left intro-left intro-left ";
+  grid-gap: 15px;
+  /* justify-items: stretch; */
+  align-items: stretch;
+}
+
+/* -------your posts css----------------------------- */
+
+.post-heading {
+  /* border: 2px solid black; */
+  margin: 5px;
+  width: 50%;
+  place-items: center;
+  margin: 10px auto;
+  color: rgb(33, 134, 2);
+}
+.post-heading hr {
+  margin: 0 auto;
+  width: 26%;
+  height: 3px;
+  background-color: rgba(250, 7, 7, 0.849);
+}
+
+.post {
+  /* border: 2px solid red; */
+  margin: 10px 0px;
+  display: flex;
+  height: auto;
+}
+
+.post .cards {
+  border: 1px solid blue;
+  margin: 10px;
+  height: 300px;
+  box-sizing: border-box;
+  width: 40%;
+  position: relative;
+  border-radius: 5px;
+}
+
+.cards::before {
+  position: absolute;
+  content: "";
+  background: url("../img/bg-2.jpg") center center/cover;
+  /* background-color: antiquewhite; */
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.6;
+  /* background-repeat: no-repeat; */
+  overflow: hidden;
+}
+
+.post .content {
+  /* border: 3px solid green; */
+  place-items: center;
+  padding-left: 20px;
+  padding-top: 10px;
+  margin-top: 100px;
+  height: auto;
+}
+.content .price {
+  /* border: 3px solid rgb(217, 255, 0); */
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.post .cards th {
+  /* border: 2px solid black; */
+  box-shadow: 2px 2px 2px yellow;
+  margin-left: 5px;
+  background-color: rgb(27, 27, 124);
+  outline: none;
+  color: white;
+  font-family: var(--font-3);
+  padding: 10px;
+}
+.post .cards td {
+  outline: none;
+
+  font-family: var(--font-3);
+  padding: 0 20px;
+  line-height: 1.5em;
+}
+.post .cards td {
+  font-family: var(--font-3);
+  font-weight: 600;
+}
+
+/* ----------------ads in your area css------------------- */
+
+.advert {
+  /* border: 3px solid rgb(58, 10, 231); */
+  display: flex;
+  margin: 10px 0px;
+}
+
+.advert .card::before {
+  position: absolute;
+  content: "";
+  background: url("../img/2.jpg") center center/cover;
+  background-color: blanchedalmond;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.5;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.advert .card {
+  /* border: 2px solid red; */
+
+  margin: 10px;
+  height: 300px;
+  box-sizing: border-box;
+  width: 40%;
+  position: relative;
+  border-radius: 5px;
+}
+.card button {
+  border: 1px solid rgb(24, 202, 8);
+  font-family: var(--font-3);
+  font-weight: bold;
+  text-align: center;
+  margin: 10px 125px;
+  font-size: 1.2em;
+  width: 30%;
+  /* box-shadow: ; */
+  padding: 10px;
+}
+
+/* ----------------------Profile section -------------------------- */
+.profile {
+  height: auto;
+  display: flex;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.profile .card3::before {
+  position: absolute;
+  content: "";
+  background: url("../img/2.jpg") center center/cover;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.4;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.profile .card3 {
+  border: 2px solid red;
+  margin: 10px;
+  height: auto;
+  box-sizing: border-box;
+  width: 40%;
+  align-items: center;
+  position: relative;
+  border-radius: 10px;
+  transition: all 0.6s ease-in;
+}
+
+.profile .card3:hover {
+  transform: translate(0px, 10px) scale(1.03);
+}
+
+.profile .profile-img {
+  width: 160px;
+  height: 160px;
+  display: block;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgb(20, 233, 30);
+  margin: auto;
+  margin-top: 5px;
+}
+
+.profile .card3 .first .left {
+  display: inline-block;
+  width: 30%;
+  box-shadow: 3px 3px 3px green;
+  background-color: blanchedalmond;
+  border-radius: 20px;
+  font-size: 1.2em;
+  font-weight: bolder;
+  text-decoration: none;
+  padding: 5px;
+  color: rgb(15, 15, 15);
+  text-align: center;
+  margin: 10px 0;
+  margin-left: 75px;
+  font-family: var(--font-3);
+}
+
+.profile .card3 .first .right {
+  display: inline-block;
+  width: 30%;
+  border: 2px soild yellow;
+  box-shadow: 3px 3px 3px green;
+  background-color: blanchedalmond;
+  border-radius: 20px;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 5px;
+  color: rgb(15, 15, 15);
+  text-align: center;
+  margin-left: 12px;
+  font-family: var(--font-3);
+}
+
+.profile .card3 .details .last {
+  display: inline-block;
+  width: 40%;
+  border: 2px soild yellow;
+  box-shadow: 3px 3px 3px green;
+  background-color: rgb(228, 145, 120);
+  border-radius: 20px;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 5px;
+  color: rgb(15, 15, 15);
+  text-align: center;
+  margin: 10px 0;
+  margin-left: 134px;
+  /* background-color: rgb(53, 53, 143); */
+  font-family: var(--font-3);
+  animation-name: "";
+}
+
+
+.hr-long{
+    border: 1px solid olive;
+    border-radius:10px ;
+    height: 2px;
+    background-color: olive;
+}
